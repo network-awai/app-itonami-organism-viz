@@ -56,7 +56,7 @@ DIST_DIR = PKG_DIR / "dist"
 LEGACY_DIR = PKG_DIR / "frontend"
 FRONTEND_DIR = DIST_DIR if DIST_DIR.is_dir() else LEGACY_DIR
 
-app = FastAPI(title="etzhayyim-organism-viz", version="0.4.0")
+app = FastAPI(title="itonami-organism-viz", version="0.4.0")
 
 
 # ── static + index ────────────────────────────────────────────────────────

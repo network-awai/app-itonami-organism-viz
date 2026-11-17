@@ -1,8 +1,8 @@
-(ns etzhayyim-organism-viz.ideal-state-test
+(ns itonami-organism-viz.ideal-state-test
   "Coverage for the homeostatic-range model (§1.15 non-eschatology: bands, not
   targets). Pure — no host I/O."
   (:require [kotoba.test :refer [deftest is testing]]
-            [etzhayyim-organism-viz.ideal-state :as ideal]))
+            [itonami-organism-viz.ideal-state :as ideal]))
 
 (deftest ranges-shape
   (testing "the encoded bands are the 15 Python RANGES, each a field-keyed map"

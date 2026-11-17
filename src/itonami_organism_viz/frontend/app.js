@@ -1,4 +1,4 @@
-// etzhayyim-organism-viz — interactive bonsai client.
+// itonami-organism-viz — interactive bonsai client.
 // Vanilla JS, no framework. Substrate-boundary safe: only talks to same-origin /api/*.
 
 const $ = (sel) => document.querySelector(sel);

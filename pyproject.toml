@@ -1,5 +1,5 @@
 [project]
-name = "etzhayyim-organism-viz"
+name = "itonami-organism-viz"
 version = "0.2.0"
 description = "Realtime + interactive visualization of the religious-corp artificial-organism ecosystem (bonsai metaphor: leaves / flowers / fruits / seeds)"
 requires-python = ">=3.11"
@@ -10,15 +10,15 @@ dependencies = [
 ]
 
 [project.scripts]
-etzhayyim-viz = "etzhayyim_organism_viz.__main__:main"
+itonami-viz = "itonami_organism_viz.__main__:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/etzhayyim_organism_viz"]
+packages = ["src/itonami_organism_viz"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"src/etzhayyim_organism_viz/frontend" = "etzhayyim_organism_viz/frontend"
-"web/dist" = "etzhayyim_organism_viz/dist"
+"src/itonami_organism_viz/frontend" = "itonami_organism_viz/frontend"
+"web/dist" = "itonami_organism_viz/dist"

@@ -39,8 +39,8 @@ export function buildLayout(snap: Snapshot, w: number, h: number): NodePos[] {
   }
 
   // ecosystem center
-  if (snap.entities["ecosystem/etzhayyim"])
-    place("ecosystem/etzhayyim", "ecosystem", cx, cy);
+  if (snap.entities["ecosystem/itonami"])
+    place("ecosystem/itonami", "ecosystem", cx, cy);
   // organism just above center
   if (snap.entities["organism/cns"])
     place("organism/cns", "organism", cx, cy - 60);

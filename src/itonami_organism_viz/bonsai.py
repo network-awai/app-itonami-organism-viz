@@ -49,7 +49,7 @@ def render(axis_scores: dict[str, int], alive: AliveTuple, width: int = 900, hei
     # title
     svg.append(
         f'<text x="{cx}" y="28" text-anchor="middle" font-size="16" font-weight="600" fill="#222">'
-        f'etzhayyim Bonsai of Life</text>'
+        f'itonami Bonsai of Life</text>'
     )
     svg.append(
         f'<text x="{cx}" y="46" text-anchor="middle" fill="#666" font-size="11">'

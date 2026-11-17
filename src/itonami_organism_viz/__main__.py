@@ -1,13 +1,13 @@
-"""etzhayyim-viz CLI.
+"""itonami-viz CLI.
 
 Subcommands:
   static  — render aliveness.json + bonsai.svg + dashboard.html (one-shot)
   serve   — run the FastAPI realtime server (interactive)
 
 Usage:
-    python -m etzhayyim_organism_viz serve --repo /repo --port 8081
-    python -m etzhayyim_organism_viz static --repo /repo
-    python -m etzhayyim_organism_viz                       # alias of `static`
+    python -m itonami_organism_viz serve --repo /repo --port 8081
+    python -m itonami_organism_viz static --repo /repo
+    python -m itonami_organism_viz                       # alias of `static`
 """
 
 from __future__ import annotations
@@ -62,7 +62,7 @@ def cmd_static(args: argparse.Namespace) -> int:
     bands = in_healthy_band(a)
     axis_scores = _latest_axis_scores(repo)
 
-    out = Path(args.out) if args.out else (repo / "60-apps" / "etzhayyim-organism-viz" / "static")
+    out = Path(args.out) if args.out else (repo / "60-apps" / "itonami-organism-viz" / "static")
     out.mkdir(parents=True, exist_ok=True)
     payload = {"tuple": a.as_dict(), "in_band": bands, "axis_scores": axis_scores}
     (out / "aliveness.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -83,9 +83,9 @@ def cmd_static(args: argparse.Namespace) -> int:
 def cmd_serve(args: argparse.Namespace) -> int:
     import uvicorn  # type: ignore
     os.environ["ETZ_REPO"] = str(Path(args.repo).resolve())
-    logging.info("etzhayyim-viz serve: repo=%s host=%s port=%d", args.repo, args.host, args.port)
+    logging.info("itonami-viz serve: repo=%s host=%s port=%d", args.repo, args.host, args.port)
     uvicorn.run(
-        "etzhayyim_organism_viz.server:app",
+        "itonami_organism_viz.server:app",
         host=args.host, port=args.port, log_level="info", reload=False,
     )
     return 0
@@ -93,7 +93,7 @@ def cmd_serve(args: argparse.Namespace) -> int:
 
 def main() -> int:
     logging.basicConfig(level="INFO", format="%(asctime)s %(levelname)s %(message)s")
-    p = argparse.ArgumentParser(prog="etzhayyim-viz")
+    p = argparse.ArgumentParser(prog="itonami-viz")
     sub = p.add_subparsers(dest="cmd")
     p_static = sub.add_parser("static", help="emit static artefacts")
     p_static.add_argument("--repo", default=os.environ.get("ETZ_REPO", "/repo"))

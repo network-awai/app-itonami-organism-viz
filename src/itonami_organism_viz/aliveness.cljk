@@ -1,11 +1,11 @@
-;; ported from 60-apps/etzhayyim-organism-viz/src/etzhayyim_organism_viz/aliveness.py
+;; ported from 60-apps/itonami-organism-viz/src/itonami_organism_viz/aliveness.py
 ;; — faithful clj port of the aliveness functional A(t) = ⟨M,D,C,P,G⟩ (5-tuple,
 ;; NOT a scalar — §1.15 anti-eschatology: no scalar sum, no trade-offs between
 ;; dimensions). Pure math (Shannon entropy / Pearson correlation / axis-Δ motion /
 ;; tended-cell ratio) lives in cljc; host file/dir I/O lives behind #?(:clj ...),
 ;; mirroring pruning.cljc. ns drops the "src" source-root and mirrors the Python
-;; module etzhayyim_organism_viz.aliveness.
-(ns etzhayyim-organism-viz.aliveness
+;; module itonami_organism_viz.aliveness.
+(ns itonami-organism-viz.aliveness
   "aliveness.py — Aliveness functional A(t) = ⟨M,D,C,P,G⟩.
 
     M = motion       — Σ |Δ_axis| over recent cycles + 0.3·creation/day

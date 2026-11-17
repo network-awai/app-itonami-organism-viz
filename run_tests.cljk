@@ -2,12 +2,12 @@
 ;; run_tests.cljk — repo rule: ship a .clj runner, not a .sh. Equivalent to `kbb -M:test`.
 ;; Loads every organism-viz cljc twin + its tests and exits non-zero on any failure.
 (require '[kotoba.test :as t]
-         '[etzhayyim-organism-viz.pruning-test]
-         '[etzhayyim-organism-viz.aliveness-test]
-         '[etzhayyim-organism-viz.ideal-state-test])
+         '[itonami-organism-viz.pruning-test]
+         '[itonami-organism-viz.aliveness-test]
+         '[itonami-organism-viz.ideal-state-test])
 
 (let [{:keys [fail error]}
-      (t/run-tests 'etzhayyim-organism-viz.pruning-test
-                   'etzhayyim-organism-viz.aliveness-test
-                   'etzhayyim-organism-viz.ideal-state-test)]
+      (t/run-tests 'itonami-organism-viz.pruning-test
+                   'itonami-organism-viz.aliveness-test
+                   'itonami-organism-viz.ideal-state-test)]
   (System/exit (if (pos? (+ fail error)) 1 0)))

@@ -1,7 +1,7 @@
 """Pruning candidate detector — operator workflow surface (盆栽 剪定).
 
 The daemon NEVER prunes. Per §1.3 (anti-individualist, decision attribution =
-etzhayyim) the daemon's job is to *surface* candidates honestly; the operator
+itonami) the daemon's job is to *surface* candidates honestly; the operator
 decides whether to `git rm` them.
 
 A candidate has:
@@ -132,7 +132,7 @@ def to_markdown(repo: Path, candidates: list[Candidate]) -> str:
     lines.append("")
     lines.append(
         "**Daemon does not prune.** Per ADR-2605192100 §1.3, decision attribution "
-        "= etzhayyim. The list below is the daemon's honest observation; "
+        "= itonami. The list below is the daemon's honest observation; "
         "the operator decides what to `git rm`."
     )
     lines.append("")
@@ -162,7 +162,7 @@ def to_markdown(repo: Path, candidates: list[Candidate]) -> str:
 
 
 def emit(repo: Path) -> Path:
-    out_dir = repo / "60-apps" / "etzhayyim-organism-viz" / "static"
+    out_dir = repo / "60-apps" / "itonami-organism-viz" / "static"
     out_dir.mkdir(parents=True, exist_ok=True)
     candidates = scan_all(repo)
     out = out_dir / "pruning-candidates.md"

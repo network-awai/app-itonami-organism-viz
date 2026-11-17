@@ -55,7 +55,7 @@
 
 <header class="kakejiku">
   <div class="brand">
-    <span class="brand-jp">etzhayyim</span>
+    <span class="brand-jp">itonami</span>
     <span class="sep">·</span>
     <span class="brand-en">縁起トポロジー</span>
   </div>

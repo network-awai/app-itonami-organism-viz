@@ -1,10 +1,10 @@
-(ns etzhayyim-organism-viz.aliveness-test
+(ns itonami-organism-viz.aliveness-test
   "Port of tests/test_aliveness.py — drives the aliveness 5-tuple A(t) through
   tmp-repo fixtures (the same Shannon-entropy / Pearson / axis-Δ / tended-cell
   fixtures as the Python pytest suite). Pure fns + the #?(:clj) FS scanners."
   (:require [kotoba.io :as kio] [kotoba.test :refer [deftest is testing]]
             [kotoba.lang.text :as str]
-            [etzhayyim-organism-viz.aliveness :as av]))
+            [itonami-organism-viz.aliveness :as av]))
 
 (defn- approx
   ([a b] (approx a b 1e-9))
