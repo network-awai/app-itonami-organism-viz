@@ -1,1 +1,1 @@
-{:schema "etzhayyim.repository/readme-v1" :name "com-etzhayyim-app-organism-viz" :kind :application :source "etzhayyim/root/60-apps/etzhayyim-organism-viz"}
+{:schema "itonami.repository/readme-v1" :name "app-itonami-organism-viz" :kind :application :source "itonami/root/60-apps/itonami-organism-viz"}

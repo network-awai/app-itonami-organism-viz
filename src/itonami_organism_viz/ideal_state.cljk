@@ -1,7 +1,7 @@
-;; ported from 60-apps/etzhayyim-organism-viz/src/etzhayyim_organism_viz/ideal_state.py
+;; ported from 60-apps/itonami-organism-viz/src/itonami_organism_viz/ideal_state.py
 ;; — pure (no host I/O), so the whole namespace is plain cljc. ns drops the "src"
-;; source-root and mirrors the Python module etzhayyim_organism_viz.ideal_state.
-(ns etzhayyim-organism-viz.ideal-state
+;; source-root and mirrors the Python module itonami_organism_viz.ideal_state.
+(ns itonami-organism-viz.ideal-state
   "ideal_state.py — Encoded ideal state as HOMEOSTATIC RANGES, not target values.
 
   Per ADR-2605192100 §1.15 (non-eschatological), the ideal is a healthy

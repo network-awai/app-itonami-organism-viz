@@ -17,7 +17,7 @@ import pytest
 SRC = pathlib.Path(__file__).resolve().parent.parent / "src"
 sys.path.insert(0, str(SRC))
 
-from etzhayyim_organism_viz import aliveness as av  # noqa: E402
+from itonami_organism_viz import aliveness as av  # noqa: E402
 
 
 # ── fixture builders ─────────────────────────────────────────────────────────

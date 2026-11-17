@@ -1,14 +1,14 @@
-;; ported from 60-apps/etzhayyim-organism-viz/src/etzhayyim_organism_viz/pruning.py
+;; ported from 60-apps/itonami-organism-viz/src/itonami_organism_viz/pruning.py
 ;; — real port replacing the unit_refactor stage-0 "TODO: port-failed" stubs.
 ;; NS fixed (the broken stub carried a wrong source-root segment
-;; "etzhayyim-organism-viz.src.etzhayyim-organism-viz.pruning"; the correct ns drops
-;; the "src" source-root and mirrors the Python module etzhayyim_organism_viz.pruning).
+;; "itonami-organism-viz.src.itonami-organism-viz.pruning"; the correct ns drops
+;; the "src" source-root and mirrors the Python module itonami_organism_viz.pruning).
 ;; .cljc; host file/dir I/O lives behind #?(:clj ...). Self-contained (no sibling requires).
-(ns etzhayyim-organism-viz.pruning
+(ns itonami-organism-viz.pruning
   "pruning.py — Pruning candidate detector — operator workflow surface (盆栽 剪定).
 
   The daemon NEVER prunes. Per §1.3 (anti-individualist, decision attribution =
-  etzhayyim) the daemon's job is to *surface* candidates honestly; the operator
+  itonami) the daemon's job is to *surface* candidates honestly; the operator
   decides whether to `git rm` them.
 
   A candidate (string-keyed map, matching the Python @dataclass field order) has:
@@ -182,7 +182,7 @@
                    ["# Pruning Candidates"
                     ""
                     (str "**Daemon does not prune.** Per ADR-2605192100 §1.3, decision attribution "
-                         "= etzhayyim. The list below is the daemon's honest observation; "
+                         "= itonami. The list below is the daemon's honest observation; "
                          "the operator decides what to `git rm`.")
                     ""
                     "_No candidates — the bonsai is currently in healthy growth without overgrowth._"])
@@ -193,7 +193,7 @@
       ["# Pruning Candidates"
        ""
        (str "**Daemon does not prune.** Per ADR-2605192100 §1.3, decision attribution "
-            "= etzhayyim. The list below is the daemon's honest observation; "
+            "= itonami. The list below is the daemon's honest observation; "
             "the operator decides what to `git rm`.")
        ""
        (str "## " (count candidates) " candidate(s) — sorted by severity")
@@ -222,9 +222,9 @@
 #?(:clj
    (defn emit
      "emit(repo) — write the rendered Markdown to
-     <repo>/60-apps/etzhayyim-organism-viz/static/pruning-candidates.md; returns the path."
+     <repo>/60-apps/itonami-organism-viz/static/pruning-candidates.md; returns the path."
      [repo]
-     (let [out-dir (clojure.java.io/file (str repo "/60-apps/etzhayyim-organism-viz/static"))]
+     (let [out-dir (clojure.java.io/file (str repo "/60-apps/itonami-organism-viz/static"))]
        (.mkdirs out-dir)
        (let [candidates (scan-all repo)
              out (clojure.java.io/file out-dir "pruning-candidates.md")]

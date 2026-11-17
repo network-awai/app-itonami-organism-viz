@@ -1,6 +1,6 @@
 """Per-entity chat — entities speak by surfacing their own state honestly.
 
-No LLM. Per §1.3 (anti-individualist, payoff = etzhayyim only), we refuse to
+No LLM. Per §1.3 (anti-individualist, payoff = itonami only), we refuse to
 synthesize answers — that would let a daemon impersonate the organism.
 Instead each entity answers by exposing what it actually contains.
 
@@ -196,7 +196,7 @@ def _ecosystem_voice(snap, e, intent: str) -> str:
     s = e.state
     if intent == "identity":
         return (
-            "私は etzhayyim ecosystem 全体。"
+            "私は itonami ecosystem 全体。"
             "宗教法人 (任意団体) として人類の構造的労働解放を目的とする。"
         )
     if intent == "purpose":

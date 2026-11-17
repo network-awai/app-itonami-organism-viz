@@ -1,6 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "test": "kbb --backend sci --classpath src:test -e \"(require '[clojure.test :as t] 'etzhayyim-organism-viz.pruning-test 'etzhayyim-organism-viz.aliveness-test 'etzhayyim-organism-viz.ideal-state-test) (let [r (t/run-tests 'etzhayyim-organism-viz.pruning-test 'etzhayyim-organism-viz.aliveness-test 'etzhayyim-organism-viz.ideal-state-test)] (.exit js/process (if (pos? (+ (:fail r) (:error r))) 1 0)))\""
+    "test": "kbb --backend sci --classpath src:test -e \"(require '[clojure.test :as t] 'itonami-organism-viz.pruning-test 'itonami-organism-viz.aliveness-test 'itonami-organism-viz.ideal-state-test) (let [r (t/run-tests 'itonami-organism-viz.pruning-test 'itonami-organism-viz.aliveness-test 'itonami-organism-viz.ideal-state-test)] (.exit js/process (if (pos? (+ (:fail r) (:error r))) 1 0)))\""
   }
 }

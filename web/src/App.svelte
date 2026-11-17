@@ -51,7 +51,7 @@
   </main>
 {:else}
   <div class="boot">
-    <p>etzhayyim · 縁起トポロジー</p>
+    <p>itonami · 縁起トポロジー</p>
     <small>観測 接続中…</small>
   </div>
 {/if}

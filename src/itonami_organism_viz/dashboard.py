@@ -20,7 +20,7 @@ def render(alive: AliveTuple, axis_scores: dict[str, int], bonsai_svg: str) -> s
     notes = "".join(f"<li>{n}</li>" for n in alive.notes)
     return f"""<!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
-<title>etzhayyim organism — aliveness dashboard</title>
+<title>itonami organism — aliveness dashboard</title>
 <style>
   body {{ font-family: ui-sans-serif, -apple-system, sans-serif; background:#fffaf2; color:#222; margin:0; padding:24px 32px; }}
   h1 {{ margin:0 0 4px; font-size:22px; }}
@@ -37,7 +37,7 @@ def render(alive: AliveTuple, axis_scores: dict[str, int], bonsai_svg: str) -> s
   svg {{ width:100%; height:auto; }}
 </style></head>
 <body>
-  <h1>etzhayyim Bonsai of Life</h1>
+  <h1>itonami Bonsai of Life</h1>
   <div class="sub">{alive.timestamp} · 非終末論 active-inference health surface · ADR-2605192100 §1.15</div>
 
   <div>
@@ -76,9 +76,9 @@ def render(alive: AliveTuple, axis_scores: dict[str, int], bonsai_svg: str) -> s
   </div>
 
   <p style="margin-top:32px;color:#888;font-size:12px">
-    Constitutional anchor: <a href="../../../90-docs/adr/2605192100-etzhayyim-mission-charter.md">ADR-2605192100 §1</a>
+    Constitutional anchor: <a href="../../../90-docs/adr/2605192100-itonami-mission-charter.md">ADR-2605192100 §1</a>
     · Ideal state prior: <a href="../../../90-docs/2605221243-ideal-ecosystem-state-active-inference-prior.md">2605221243</a>
-    · Source: <code>60-apps/etzhayyim-organism-viz/</code>
+    · Source: <code>60-apps/itonami-organism-viz/</code>
   </p>
 </body></html>
 """

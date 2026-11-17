@@ -1,4 +1,4 @@
-# etzhayyim-organism-viz — realtime + interactive Svelte sumi-e topology
+# itonami-organism-viz — realtime + interactive Svelte sumi-e topology
 #
 # Multi-stage: Node builds the Svelte app → wheel includes dist/ → Python serves.
 
@@ -14,8 +14,8 @@ RUN pnpm run build
 FROM python:3.13-slim
 
 LABEL org.opencontainers.image.source="https://github.com/etzhayyim/root"
-LABEL org.opencontainers.image.description="etzhayyim-organism-viz — sumi-e topology + chat + SSE"
-LABEL org.opencontainers.image.licenses="Apache-2.0 WITH etzhayyim-Charter-Rider-2.0"
+LABEL org.opencontainers.image.description="itonami-organism-viz — sumi-e topology + chat + SSE"
+LABEL org.opencontainers.image.licenses="Apache-2.0 WITH itonami-Charter-Rider-2.0"
 
 WORKDIR /app
 ENV PYTHONUNBUFFERED=1 \
@@ -30,7 +30,7 @@ COPY organism-pkg /app/organism-pkg
 # Force-include in pyproject.toml expects web/dist at the same relative path
 # the host has, so the wheel build can locate it. Use BOTH locations.
 COPY --from=web /web/dist /app/web/dist
-COPY --from=web /web/dist /app/src/etzhayyim_organism_viz/dist
+COPY --from=web /web/dist /app/src/itonami_organism_viz/dist
 
 RUN pip install --no-cache-dir \
       "fastapi>=0.115.0" \
@@ -43,4 +43,4 @@ RUN useradd --no-create-home --uid 10001 viz
 USER 10001:10001
 
 EXPOSE 8081
-ENTRYPOINT ["python", "-m", "etzhayyim_organism_viz", "serve"]
+ENTRYPOINT ["python", "-m", "itonami_organism_viz", "serve"]

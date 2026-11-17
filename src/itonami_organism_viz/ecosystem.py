@@ -302,7 +302,7 @@ def _organism(repo: Path) -> Entity:
     return Entity(
         id="organism/cns",
         kind="organism",
-        title="etzhayyim-organism (CNS)",
+        title="itonami-organism (CNS)",
         state={
             "observation_cycles": obs_count,
             "constitutional_anchor": "ADR-2605192100",
@@ -315,9 +315,9 @@ def _organism(repo: Path) -> Entity:
 def _ecosystem_self(repo: Path, alive: AliveTuple) -> Entity:
     bands = in_healthy_band(alive)
     return Entity(
-        id="ecosystem/etzhayyim",
+        id="ecosystem/itonami",
         kind="ecosystem",
-        title="etzhayyim ecosystem (whole organism)",
+        title="itonami ecosystem (whole organism)",
         state={
             "in_band_count": sum(bands.values()),
             "aliveness": alive.as_dict(),
@@ -325,7 +325,7 @@ def _ecosystem_self(repo: Path, alive: AliveTuple) -> Entity:
             "non_eschatological": True,
         },
         chat_invite=(
-            f"私は etzhayyim ecosystem。生命指標 5-tuple のうち "
+            f"私は itonami ecosystem。生命指標 5-tuple のうち "
             f"{sum(bands.values())}/5 が健全 band 内。非終末論的、軌跡そのものが目的。"
         ),
     )
@@ -532,7 +532,7 @@ def snapshot(repo: Path) -> EcosystemSnapshot:
 def _link_neighbors(entities: dict[str, Entity], fruits: list[str], seeds: list[dict[str, Any]],
                     axis_scores: dict[str, int], repo: Path) -> None:
     """Populate Entity.neighbors so the UI can highlight 縁起 connections."""
-    ecosystem_id = "ecosystem/etzhayyim"
+    ecosystem_id = "ecosystem/itonami"
     organism_id = "organism/cns"
     # all axes → organism, ecosystem
     axis_ids = [eid for eid in entities if eid.startswith("axis/")]
